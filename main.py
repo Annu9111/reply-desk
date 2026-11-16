@@ -1,5 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from pathlib import Path
+
+from fastapi.responses import FileResponse
 
 from approvals import ApprovalError
 from service import ReplyService
@@ -30,9 +33,9 @@ def health():
     return {"status": "ok", "env": settings["env"]}
 
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def home():
-    return {"message": "Reply Desk is running"}
+    return FileResponse(Path(__file__).parent / "static" / "index.html")
 
 
 @app.post("/messages")
