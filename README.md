@@ -4,7 +4,7 @@
 
 Built as the capstone for the Homingo Learn course *Build and ship an AI agent + MCP server*.
 
-**Live demo:** https://REPLACE-WITH-YOUR-RENDER-LINK
+**Live demo:** https://reply-desk-fj3z.onrender.com
 (The free host sleeps when idle, so the first load can take about a minute.)
 
 ## Screenshots
